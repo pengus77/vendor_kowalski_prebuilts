@@ -23,7 +23,8 @@ PRODUCT_PACKAGES += \
     SafetyHubPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
     GooglePermissionControllerOverlay \
-    RetroMusicPlayer
+    RetroMusicPlayer \
+    GalleryGoPrebuilt
 
 ifeq ($(TARGET_GAPPS_ARCH),arm64)
 PRODUCT_PACKAGES += \
