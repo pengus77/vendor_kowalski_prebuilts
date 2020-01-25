@@ -17,6 +17,7 @@ LOCAL_PATH := vendor/cesiumstyle
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
     NexusLauncherRelease \
+    AppLock \
     NexusWallpapersStubPrebuilt2019Static \
     PixelThemesStub2019 \
     SafetyHubPrebuilt \
