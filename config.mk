@@ -207,3 +207,6 @@ PRODUCT_PACKAGES += \
 # Include product overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
+
+# Inherit from fonts config
+$(call inherit-product, vendor/cesiumstyle/config/fonts.mk)
