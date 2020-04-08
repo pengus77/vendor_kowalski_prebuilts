@@ -25,7 +25,10 @@ PRODUCT_PACKAGES += \
     GooglePermissionControllerOverlay \
     RetroMusicPlayer \
     GalleryGoPrebuilt \
-    ChromePublic
+    ChromePublic \
+    SoundPickerPrebuilt \
+    WallpaperPickerGoogleRelease \
+    WellbeingPrebuilt
 
 ifeq ($(TARGET_GAPPS_ARCH),arm64)
 PRODUCT_PACKAGES += \
