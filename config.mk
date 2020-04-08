@@ -24,7 +24,8 @@ PRODUCT_PACKAGES += \
     SettingsIntelligenceGooglePrebuilt \
     GooglePermissionControllerOverlay \
     RetroMusicPlayer \
-    GalleryGoPrebuilt
+    GalleryGoPrebuilt \
+    ChromePublic
 
 ifeq ($(TARGET_GAPPS_ARCH),arm64)
 PRODUCT_PACKAGES += \
