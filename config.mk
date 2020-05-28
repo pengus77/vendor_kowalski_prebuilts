@@ -21,8 +21,6 @@ PRODUCT_PACKAGES += \
     NexusWallpapersStubPrebuilt2019Static \
     PixelThemesStub2019 \
     SafetyHubPrebuilt \
-    SetupWizardPrebuilt \
-    PixelSetupWizard \
     SettingsIntelligenceGooglePrebuilt \
     GooglePermissionControllerOverlay \
     RetroMusicPlayer \
