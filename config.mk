@@ -21,7 +21,6 @@ PRODUCT_PACKAGES += \
     PixelThemesStub2019 \
     SafetyHubPrebuilt \
     SettingsIntelligenceGooglePrebuilt \
-    GooglePermissionControllerOverlay \
     RetroMusicPlayer \
     GalleryGoPrebuilt \
     Via \
