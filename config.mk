@@ -25,7 +25,7 @@ PRODUCT_PACKAGES += \
     GooglePermissionControllerOverlay \
     RetroMusicPlayer \
     GalleryGoPrebuilt \
-    ChromePublic \
+    Via \
     SoundPickerPrebuilt \
     WallpaperPickerGoogleRelease \
     WellbeingPrebuilt
