@@ -30,7 +30,7 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogleRelease \
     WellbeingPrebuilt
 
-ifeq ($(TARGET_GAPPS_ARCH),arm64)
+ifeq (,$(filter $(TARGET_ARCH), arm64))
 PRODUCT_PACKAGES += \
     MatchmakerPrebuiltPixel4
 endif
