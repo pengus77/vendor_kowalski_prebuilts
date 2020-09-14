@@ -1,4 +1,5 @@
 # Copyright (C) 2017 The Pure Nexus Project
+# Copyright (C) 2018-2020 The CesiumOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,51 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := vendor/cesiumstyle
-
-# Prebuilt Packages
-PRODUCT_PACKAGES += \
-    NexusLauncherRelease \
-    NexusWallpapersStubPrebuilt2019Static \
-    PixelThemesStub2019 \
-    SafetyHubPrebuilt \
-    SettingsIntelligenceGooglePrebuilt \
-    RetroMusicPlayer \
-    GalleryGoPrebuilt \
-    Via \
-    SoundPickerPrebuilt \
-    WallpaperPickerGoogleRelease \
-    WellbeingPrebuilt
-
-ifeq (,$(filter $(TARGET_ARCH), arm64))
-PRODUCT_PACKAGES += \
-    MatchmakerPrebuiltPixel4
-endif
-
-# Offline charger
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    product_charger_res_images
+LOCAL_PATH := vendor/cesium-prebuilts
 
 # Bootanimation
-ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
      PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
      PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440)
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation-dark_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation_720.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation-dark_720.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
-else
-    ifeq ($(TARGET_BOOT_ANIMATION_RES),)
-        $(warning "CesiumStyle: TARGET_BOOT_ANIMATION_RES is undefined, assuming 1080p")
-    else
-        $(warning "CesiumStyle: Current bootanimation res is not supported, forcing 1080p")
-    endif
-    PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-    PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
-endif
 
 # Gestures
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -97,13 +58,3 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.clientidbase=android-google \
     ro.error.receiver.system.apps=com.google.android.gms \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent
-
-# Include product overlays
-PRODUCT_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
-# Inherit from audio config
-$(call inherit-product, vendor/cesiumstyle/config/audio.mk)
-
-# Inherit from fonts config
-$(call inherit-product, vendor/cesiumstyle/config/fonts.mk)
