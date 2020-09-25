@@ -1,5 +1,6 @@
 # Copyright (C) 2017 The Pure Nexus Project
 # Copyright (C) 2018-2020 The CesiumOS Project
+# Copyright (C) 2020 The KowalskiOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := vendor/cesium-prebuilts
+LOCAL_PATH := vendor/kowalski-prebuilts
 
 # Bootanimation
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+#    PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+#    PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 
 # Gestures
 PRODUCT_PROPERTY_OVERRIDES += \
